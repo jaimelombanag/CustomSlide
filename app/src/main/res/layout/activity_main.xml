@@ -3,32 +3,150 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:background="@android:color/white"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    >
 
-    <com.marcinmoskala.arcseekbar.ArcSeekBar
-        android:id="@+id/seekArc"
+
+    <LinearLayout
+        android:id="@+id/layout_principal"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="20dp"
-        android:padding="20dp"
-        app:progressBackgroundColor="@color/sliderBack"
-        app:progressBackgroundWidth="20dp"
-        app:progress="0"
-        app:progressWidth="20dp"
-        app:roundEdges="true" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="pulse_loader.json"
+                app:lottie_loop="true"
+                android:visibility="gone"/>
+
+
+            <com.marcinmoskala.arcseekbar.sample.GifImageView
+
+                android:id="@+id/animation2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
 
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5"
-        android:id="@+id/calificacion"
-        android:textStyle="bold"
-        android:textSize="50dp"/>
+            <TextView
+                android:id="@+id/calificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"/>
+
+
+        </FrameLayout>
+        <com.marcinmoskala.arcseekbar.ArcSeekBar
+            android:id="@+id/seekArc"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:progressBackgroundColor="@color/sliderBack"
+            app:progressBackgroundWidth="40dp"
+            app:progress="0"
+            app:progressWidth="20dp"
+            app:roundEdges="true"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+
+
+            <com.marcinmoskala.arcseekbar.sample.GifImageView
+
+                android:id="@+id/GifImageView"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginRight="250dp"
+                android:clickable="true"
+                android:onClick="InicioConteo"/>
+
+
+            <com.marcinmoskala.arcseekbar.sample.GifImageView
+
+                android:id="@+id/GifImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="ConfirmaConteo"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_calificar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+
+        <TextView
+            android:id="@+id/txt_calFinal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4.56"
+            android:gravity="center"
+            android:textSize="100dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="100dp"/>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="EXIT"
+            android:onClick="Exit"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
 
     <com.marcinmoskala.arcseekbar.ArcSeekBar
         app:thumb="@drawable/thumb2"

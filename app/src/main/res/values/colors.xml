@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#EF6C00</color>
+    <color name="colorPrimaryDark">#E65100</color>
     <color name="colorAccent">#FF4081</color>
     <color name="sliderBack">#4227395a</color>
     <array name="progressGradientColors">
-        <item>#b5fff6</item>
-        <item>#00ffdf</item>
-        <item>#00bfa4</item>
-        <item>#007c6a</item>
+        <item>#F4FF81</item>
+        <item>#EEFF41</item>
+        <item>#C6FF00</item>
+        <item>#AEEA00</item>
     </array>
 </resources>
