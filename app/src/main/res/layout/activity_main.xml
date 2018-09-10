@@ -51,52 +51,67 @@
                 android:text="5"
                 android:textSize="40dp"
                 android:textStyle="bold"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center"/>
 
 
         </FrameLayout>
-        <com.marcinmoskala.arcseekbar.ArcSeekBar
-            android:id="@+id/seekArc"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            app:progressBackgroundColor="@color/sliderBack"
-            app:progressBackgroundWidth="40dp"
-            app:progress="0"
-            app:progressWidth="20dp"
-            app:roundEdges="true"
-            />
-        <LinearLayout
+
+
+
+        <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
+            android:layout_height="wrap_content">
 
 
+            <com.marcinmoskala.arcseekbar.ArcSeekBar
+                android:id="@+id/seekArc"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:progressBackgroundColor="@color/sliderBack"
+                app:progressBackgroundWidth="40dp"
+                app:progress="0"
+                app:progressWidth="20dp"
+                app:roundEdges="true"
+                />
 
-            <com.marcinmoskala.arcseekbar.sample.GifImageView
-
-                android:id="@+id/GifImageView"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginRight="250dp"
-                android:clickable="true"
-                android:onClick="InicioConteo"/>
-
-
-            <com.marcinmoskala.arcseekbar.sample.GifImageView
-
-                android:id="@+id/GifImageView2"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:onClick="ConfirmaConteo"/>
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="110dp">
 
 
-        </LinearLayout>
+
+                <com.marcinmoskala.arcseekbar.sample.GifImageView
+
+                    android:id="@+id/GifImageView"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:clickable="true"
+                    android:onClick="InicioConteo"/>
+
+
+                <com.marcinmoskala.arcseekbar.sample.GifImageView
+
+                    android:id="@+id/GifImageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="ConfirmaConteo"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
 
     </LinearLayout>
 
@@ -118,25 +133,35 @@
 
 
 
-        <TextView
-            android:id="@+id/txt_calFinal"
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="4.56"
-            android:gravity="center"
-            android:textSize="100dp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginTop="100dp"/>
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_calFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4.56"
+                android:gravity="center"
+                android:textSize="100dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="100dp"/>
 
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="EXIT"
-            android:onClick="Exit"/>
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:onClick="Exit"
+                android:background="@drawable/atras"/>
+
+
+        </FrameLayout>
+
+
 
 
     </LinearLayout>

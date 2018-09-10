@@ -75,7 +75,7 @@ public class GifImageView extends View {
 
             mMovie.setTime(relTime);
 
-            mMovie.draw(canvas, 10, 10);
+            mMovie.draw(canvas, 5, 5);
             invalidate();
         }
     }

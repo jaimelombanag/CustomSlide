@@ -129,8 +129,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void InicioConteo(View v){
         //Toast.makeText(this, "Se Oprime el boton de inicio", Toast.LENGTH_SHORT).show();
-        animation2.setVisibility(View.VISIBLE);
-        arcSeekBar.setEnabled(true);
+
+
+        if(animation2.getVisibility() == View.VISIBLE){
+            animation2.setVisibility(View.GONE);
+            arcSeekBar.setEnabled(false);
+            MuestraCalificacion();
+        }else{
+            animation2.setVisibility(View.VISIBLE);
+            arcSeekBar.setEnabled(true);
+        }
+
+
 
 
     }
