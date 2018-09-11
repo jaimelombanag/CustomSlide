@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="0dp">
+            android:layout_marginTop="35dp">
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/animation"
@@ -49,10 +49,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
-                android:textSize="40dp"
+                android:textSize="50dp"
                 android:textStyle="bold"
+                android:textColor="#31E3FA"
                 android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="95dp"
                 android:layout_gravity="center"/>
 
 
@@ -62,28 +63,41 @@
 
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp">
 
 
             <com.marcinmoskala.arcseekbar.ArcSeekBar
                 android:id="@+id/seekArc"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_margin="10dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
                 android:padding="10dp"
                 app:progressBackgroundColor="@color/sliderBack"
                 app:progressBackgroundWidth="40dp"
                 app:progress="0"
-                app:progressWidth="20dp"
+                app:progressWidth="10dp"
                 app:roundEdges="true"
                 />
+
+
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:onClick="InicioConteo"
+                android:background="@drawable/button1"
+                android:layout_marginTop="20dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="110dp">
+                android:layout_marginTop="110dp"
+                android:visibility="gone">
 
 
 
@@ -104,6 +118,10 @@
                     android:clickable="true"
                     android:onClick="ConfirmaConteo"
                     android:visibility="gone"/>
+
+
+
+
 
 
             </LinearLayout>
@@ -146,7 +164,7 @@
                 android:gravity="center"
                 android:textSize="100dp"
                 android:textStyle="bold"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimary"
                 android:layout_marginTop="100dp"/>
 
 
