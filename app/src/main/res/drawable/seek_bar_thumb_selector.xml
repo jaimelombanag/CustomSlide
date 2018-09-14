@@ -2,7 +2,7 @@
 
     <!--When slider is pressed, show pressed image. -->
     <item android:state_pressed="true"
-        android:drawable="@drawable/esfera2"/>
+        android:drawable="@drawable/esfe"/>
 
     <!--When slider is not pressed, show unpressed image. -->
     <item android:state_pressed="false"
