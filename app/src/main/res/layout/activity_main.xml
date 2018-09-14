@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
-    android:orientation="vertical"
-    >
+    xmlns:rsv="http://schemas.android.com/tools"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
 
 
     <LinearLayout
@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/marco"
         android:visibility="visible">
 
         <FrameLayout
@@ -67,6 +68,37 @@
             android:layout_marginTop="10dp">
 
 
+            <com.github.channguyen.rsv.RangeSliderView
+                android:id="@+id/rsv_small"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                rsv:filledColor="colorPrimary"
+                android:visibility="gone"
+                />
+
+
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:progressDrawable="@drawable/red_scrubber_progress"
+                android:thumb="@drawable/esfera" />
+
+            <com.github.channguyen.rsv.RangeSliderView
+                android:id="@+id/rsv_large"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                rsv:filledColor="#FF6600"
+                android:visibility="gone"/>
+
+
             <com.marcinmoskala.arcseekbar.ArcSeekBar
                 android:id="@+id/seekArc"
                 android:layout_width="match_parent"
@@ -79,17 +111,18 @@
                 app:progress="0"
                 app:progressWidth="10dp"
                 app:roundEdges="true"
-                />
+                android:visibility="gone"/>
 
 
 
             <Button
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:onClick="InicioConteo"
-                android:background="@drawable/button1"
-                android:layout_marginTop="20dp"/>
+                android:background="@drawable/boton_calificar"
+                android:layout_marginTop="80dp"
+                android:visibility="visible"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
