@@ -75,9 +75,9 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                rsv:filledColor="colorPrimary"
-                android:visibility="gone"
-                />
+                rsv:filledColor="colorAccent"
+                android:visibility="visible"
+               />
 
 
             <SeekBar
@@ -85,8 +85,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:progressDrawable="@drawable/red_scrubber_progress"
-                android:thumb="@drawable/esfera" />
+                android:progressDrawable="@drawable/seek_bar_thumb_selector"
+                android:thumb="@drawable/esfera"
+                android:visibility="gone"/>
 
             <com.github.channguyen.rsv.RangeSliderView
                 android:id="@+id/rsv_large"

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/marco">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="2dp"
+        >
+
+
+        <TextView
+            android:id="@+id/seekBarInfoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="80dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack" />
+
+
+
+
+
+    </LinearLayout>
+
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:thumb="@drawable/seek_bar_thumb_selector"
+                android:progressDrawable="@drawable/linea_fondo"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:background="@drawable/boton_calificar"
+                    android:id="@+id/seekBarControledImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="InicioConteo"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_vacio"
+                    android:background="@drawable/boton_vacio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="ParaConteo"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+</FrameLayout>
